@@ -65,12 +65,14 @@ button{
     height: 50px;
     border-radius: 50px;
 }
-.banner>.right{
+.banner>.right>img{
+    height: 100%;
     display: flex;
     justify-content: center;
+    width: 50%;
 }
 h2{
-    font-size: 50px;
+    font-size: 52px;
     font-weight: 700px;
     font-family: sans-serif;
 }
@@ -85,9 +87,33 @@ p{
 }
 .right{
     background-image: url(imges/image.png);
+    background-repeat: no-repeat;
     height: 500px;
-    width: 500px;
+    width: 500px;   
+    display: flex;
+    justify-content: center;
 }
 .content{
     display: flex;
+}
+@media screen and  (max-width:1250px) {
+    .right{
+        background-image: none;
+    }
+}
+@media screen and (max-width:915px){
+    .header>.nav>ul{
+        display: none;
+    }
+}
+@media screen and (max-width:615px) {
+    .banner>.right>img{
+        flex-wrap: wrap;
+        flex-direction: row;
+}
+}
+@media screen {
+    .banner{
+        height: auto;
+    }
 }
